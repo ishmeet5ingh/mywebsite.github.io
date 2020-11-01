@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: brown;
+        }
+
+        header {
+            display: flex;
+            background-color: black;
+            background-image: url('https://images.unsplash.com/photo-1473269712320-f24ce5aa6e5d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1600');
+            background-size: cover;
+        }
+
+        #navigation {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* justify-content:center; */
+            /* justify-content:space-between; */
+            margin: 0px;
+            padding: 10px 20px;
+            animation-name: navbar1;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; 
+            /* animation-direction:;           */
+            position: fixed;
+            top: 0%;
+
+            width: 100%;
+            
+
+        }
+      
+     
+        ul {
+            display: flex;
+            /* text-decoration: none; */
+            list-style: none;
+
+
+        }
+
+        @keyframes navbar1 {
+            from {
+                width: 0%;
+
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        #navigation li a {
+            justify-content: center;
+            display: flex;
+            padding: 10px 20px;
+            margin: 0px 30px;
+            text-decoration: none;
+            color: white;
+            transition: 1s;
+            border-radius: 34px;
+            background-color: rgb(85, 55, 10);
+            font-size: 25px;
+            cursor: pointer;
+
+        }
+        
+
+        #navigation ul li a:hover {
+            color: yellow;
+        }
+
+        #logo {
+            font-size: 50px;
+            font-family: 'Lobster', cursive;
+            color: rgb(247, 197, 197);
+            transition: 1s;
+            /* width: 150px; */
+            /* height: 60px; */
+            text-align: center center;
+            line-height: 65px;
+        }
+
+        @media(max-width: 600px) {
+            #logo {
+                font-size: 40px;
+                padding-left: 10px 0px;
+                text-align: center;
+                padding-right: 40px
+                /* display: block; */
+                /* text-align: center; */
+
+            }
+            #navigation{
+                display: block;
+                height: 120px;
+            }
+
+
+            #navigation li a {
+                padding: 4px 4px;
+                margin: 2px 14px;
+                font-size: 15px;
+            }
+
+            #navigation ul {
+                margin: 0px;
+                padding: 20px 0px;
+
+            }
+
+            /* section{
+                height: 200px;
+            justify-content: center;
+            padding: 0px 0px;
+            margin: 0px 0px;
+            display: flex;
+            position: absolute;
+            left: 0px;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            transition: 1s;
+            } */
+            section h1 {
+                font-size: 20px;
+            }
+
+            section p {
+                font-size: 12px;
+                padding: 0px 40px;
+            }
+
+        }
+
+
+        section {
+            height: 250px;
+            width: 100%;
+
+            justify-content: center;
+            padding: 144px 0px;
+            margin: 0px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            transition: 1s;
+            /* flex-wrap: wrap; */
+        }
+
+        section p {
+            padding: 0px 0px;
+            margin: 0px 57px;
+            text-shadow: 0 0 20px  black;
+        }
+        
+
+        /* section:hover {
+            transform: scale(1.1);
+        } */
+
+        section h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 30px;
+            margin-top: 40px;
+
+        }
+
+        section p {
+            font-family: 'Trispace', sans-serif;
+            font-family: 'Grandstander', cursive;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        .box {
+            /* display: flex; */
+            /* border: 2px solid yellow; */
+            width: 400px;
+            height: 300px;
+            margin: 30px 30px;
+            padding: 0px 20px;
+            background-image: url('https://images.unsplash.com/photo-1470162656305-6f429ba817bf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1600');
+            background-size: cover;
+            box-shadow: 10px 10px;
+            transition: 1s;
+            border-radius: 30px;
+            color: rgb(243, 179, 179)
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+            z-index: 2;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navigation">
+            <div id="logo">Fooddo</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h1>Welcome to Fooddo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis molestias eius quisquam laborum!
+                Blanditiis temporibus natus sapiente voluptates est sint repellat, iusto numquam accusantium quisquam
+                provident quo eveniet deleniti, necessitatibus maiores? Atque, dignissimos Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Atque, dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                eos
+                ducimus consequatur neque reprehenderit voluptatibus eaque explicabo odit, dolorum tempora cumque.
+                Molestiae
+                ipsa sapiente perspiciatis pariatur, eaque error itaque sequi.</p>
+        </section>
+        <hr>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <div class="img"></div>
+            <h1>Food Items</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere tenetur velit maiores! Doloribus illum
+                sit sequi, veniam exercitationem vitae repudiandae, animi ea itaque perferendis velit cumque. Magni nam
+                praesentium velit?</p>
+        </div>
+        <div class="box">
+            <div class="img"></div>
+            <h1>services</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere tenetur velit maiores! Doloribus illum
+                sit sequi, veniam exercitationem vitae repudiandae, animi ea itaque perferendis velit cumque. Magni nam
+                praesentium velit?</p>
+        </div>
+        <div class="box">
+            <div class="img"></div>
+            <h1>About</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere tenetur velit maiores! Doloribus illum
+                sit sequi, veniam exercitationem vitae repudiandae, animi ea itaque perferendis velit cumque. Magni nam
+                praesentium velit?</p>
+        </div>
+    </div>
+</body>
+
+</html>
